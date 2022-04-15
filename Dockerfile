@@ -9,14 +9,7 @@ WORKDIR /etc/dns/
 
 COPY ./DnsServerApp/bin/Release/publish/ .
 
-EXPOSE 5380/tcp
-EXPOSE 53/udp
-EXPOSE 53/tcp
-EXPOSE 67/udp
-EXPOSE 853/tcp
-EXPOSE 443/tcp
-EXPOSE 80/tcp
-EXPOSE 8053/tcp
+EXPOSE 5380 53/udp 53/tcp 67/udp 853 80 443 8053
 
 VOLUME ["/etc/dns/config"]
 
